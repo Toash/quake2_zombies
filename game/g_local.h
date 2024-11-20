@@ -1056,6 +1056,7 @@ struct edict_s
 	int			gib_health;
 	int			deadflag;
 	qboolean	show_hostile;
+	int points; // Define points so that the player can use it to buy weapons and and other stuff.
 
 	float		powerarmor_time;
 

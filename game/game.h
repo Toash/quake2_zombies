@@ -68,6 +68,7 @@ typedef struct link_s
 #define	MAX_ENT_CLUSTERS	16
 
 
+// forward declaration (so we dont have to do struct edict_s entity but instead can do edict_t entity)
 typedef struct edict_s edict_t;
 typedef struct gclient_s gclient_t;
 

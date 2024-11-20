@@ -27,6 +27,7 @@ SOLDIER
 
 #include "g_local.h"
 #include "m_soldier.h"
+#include "mod.h"
 
 
 static int	sound_idle;
@@ -883,6 +884,9 @@ void soldier_fire7 (edict_t *self)
 
 void soldier_dead (edict_t *self)
 {
+	gi.dprintf("Soldier died.\n");
+	add_points(100);
+
 	VectorSet (self->mins, -16, -16, -24);
 	VectorSet (self->maxs, 16, 16, -8);
 	self->movetype = MOVETYPE_TOSS;
@@ -1143,6 +1147,7 @@ mmove_t soldier_move_death6 = {FRAME_death601, FRAME_death610, soldier_frames_de
 
 void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
+
 	int		n;
 
 // check for gib
@@ -1190,6 +1195,9 @@ void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dama
 		self->monsterinfo.currentmove = &soldier_move_death5;
 	else
 		self->monsterinfo.currentmove = &soldier_move_death6;
+
+	gi.dprintf("Soldier died.\n");
+	add_points(100);
 }
 
 
@@ -1202,6 +1210,7 @@ void SP_monster_soldier_x (edict_t *self)
 
 	self->s.modelindex = gi.modelindex ("models/monsters/soldier/tris.md2");
 	self->monsterinfo.scale = MODEL_SCALE;
+	// bounding box for collision detection
 	VectorSet (self->mins, -16, -16, -24);
 	VectorSet (self->maxs, 16, 16, 32);
 	self->movetype = MOVETYPE_STEP;
@@ -1214,6 +1223,7 @@ void SP_monster_soldier_x (edict_t *self)
 
 	self->mass = 100;
 
+	// callbacks for damage and death
 	self->pain = soldier_pain;
 	self->die = soldier_die;
 

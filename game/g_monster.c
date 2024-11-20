@@ -510,6 +510,7 @@ enemy as activator.
 */
 void monster_death_use (edict_t *self)
 {
+
 	self->flags &= ~(FL_FLY|FL_SWIM);
 	self->monsterinfo.aiflags &= AI_GOOD_GUY;
 
