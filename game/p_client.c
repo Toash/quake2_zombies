@@ -19,6 +19,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 #include "g_local.h"
 #include "m_player.h"
+#include "mod.h"
 
 void ClientUserinfoChanged (edict_t *ent, char *userinfo);
 
@@ -1253,6 +1254,9 @@ void PutClientInServer (edict_t *ent)
 	// force the current weapon up
 	client->newweapon = client->pers.weapon;
 	ChangeWeapon (ent);
+
+
+	start_display_stats();
 }
 
 /*
