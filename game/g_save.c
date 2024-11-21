@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 mmove_t mmove_reloc;
 
+// map files will be parsed, and these fields will be set for the entities properties.
 field_t fields[] = {
 	{"classname", FOFS(classname), F_LSTRING},
 	{"model", FOFS(model), F_LSTRING},

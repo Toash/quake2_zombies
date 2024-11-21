@@ -344,6 +344,7 @@ typedef struct
 // spawn_temp_t is only used to hold entity field values that
 // can be set from the editor, but aren't actualy present
 // in edict_t during gameplay
+// when themap loads it will pass all the fields through here.
 typedef struct
 {
 	// world vars
@@ -364,6 +365,8 @@ typedef struct
 	float		maxyaw;
 	float		minpitch;
 	float		maxpitch;
+
+	int spawnrate;
 } spawn_temp_t;
 
 
@@ -962,6 +965,8 @@ struct gclient_s
 };
 
 
+
+// struct for entities
 struct edict_s
 {
 	entity_state_t	s;
@@ -1056,7 +1061,7 @@ struct edict_s
 	int			gib_health;
 	int			deadflag;
 	qboolean	show_hostile;
-	int points; // Define points so that the player can use it to buy weapons and and other stuff.
+
 
 	float		powerarmor_time;
 
@@ -1110,5 +1115,11 @@ struct edict_s
 	// common data blocks
 	moveinfo_t		moveinfo;
 	monsterinfo_t	monsterinfo;
+
+
+	// MODS
+	int points; // Define points so that the player can use it to buy weapons and and other stuff.
+	int spawnrate;
+	int kills;
 };
 

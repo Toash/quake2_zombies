@@ -3,18 +3,20 @@
 #define MOD_H
 
 void start_display_stats();
-void display_stats(edict_t* self);
+void display_stats_think(edict_t* self);
 
 void add_points(int points);
+void increase_kill_count();
 
-// Function to spawn an enemy
+
+void register_spawner(edict_t* spawner);
+edict_t* get_random_spawner();
+void start_enemy_spawn();
+void enemy_spawn_think(edict_t* self);
+void spawn_enemy_at_random_spawner();
 void spawn_enemy(edict_t* spawner);
-
-// Spawner logic
-void enemy_spawner_think(edict_t* self);
-
-// Spawner entity setu
 void SP_enemy_spawner(edict_t* self);
+
 
 
 

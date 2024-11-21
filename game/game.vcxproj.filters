@@ -162,6 +162,9 @@
     <ClCompile Include="mod.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="m_zombie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="g_local.h">
@@ -240,6 +243,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="m_zombie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

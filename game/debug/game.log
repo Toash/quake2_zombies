@@ -1,5 +1,31 @@
 ﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  mod.c
+  m_zombie.c
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(526,1): warning C4005: 'FRAME_attak204': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(62): message : see previous definition of 'FRAME_attak204'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(527,1): warning C4005: 'FRAME_attak205': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(63): message : see previous definition of 'FRAME_attak205'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(528,1): warning C4005: 'FRAME_attak206': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(64): message : see previous definition of 'FRAME_attak206'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(529,1): warning C4005: 'FRAME_attak207': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(65): message : see previous definition of 'FRAME_attak207'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(530,1): warning C4005: 'FRAME_attak208': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(66): message : see previous definition of 'FRAME_attak208'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(531,1): warning C4005: 'FRAME_attak209': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(67): message : see previous definition of 'FRAME_attak209'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(532,1): warning C4005: 'FRAME_attak210': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(68): message : see previous definition of 'FRAME_attak210'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(533,1): warning C4005: 'FRAME_attak211': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(69): message : see previous definition of 'FRAME_attak211'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(534,1): warning C4005: 'FRAME_attak212': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(70): message : see previous definition of 'FRAME_attak212'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(536,1): warning C4005: 'FRAME_attak213': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(71): message : see previous definition of 'FRAME_attak213'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(537,1): warning C4005: 'FRAME_attak214': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(72): message : see previous definition of 'FRAME_attak214'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(538,1): warning C4005: 'FRAME_attak215': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(73): message : see previous definition of 'FRAME_attak215'
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(539,1): warning C4005: 'FRAME_attak216': macro redefinition
+C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\game\m_zombie.h(74): message : see previous definition of 'FRAME_attak216'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetPath(C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\debug\game.dll) does not match the Linker's OutputFile property value (C:\Users\iitoa\OneDrive\Documents\workspace\personal\Quake-2\debug\gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1365,5): warning MSB8012: TargetName(game) does not match the Linker's OutputFile property value (gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 g_ai.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification

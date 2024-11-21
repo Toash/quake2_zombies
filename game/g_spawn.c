@@ -145,6 +145,8 @@ void SP_turret_breach (edict_t *self);
 void SP_turret_base (edict_t *self);
 void SP_turret_driver (edict_t *self);
 
+void SP_monster_zombie(edict_t* self);
+
 // defines entities that can be spawned
 spawn_t	spawns[] = {
 	{"item_health", SP_item_health},
@@ -267,6 +269,7 @@ spawn_t	spawns[] = {
 	{"turret_driver", SP_turret_driver},
 
 	{ "enemy_spawner", SP_enemy_spawner },
+	{ "zombie" , SP_monster_zombie},
 
 	{NULL, NULL}
 };

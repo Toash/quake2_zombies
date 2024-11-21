@@ -1198,6 +1198,7 @@ void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dama
 
 	gi.dprintf("Soldier died.\n");
 	add_points(100);
+	increase_kill_count();
 }
 
 

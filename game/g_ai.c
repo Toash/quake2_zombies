@@ -406,6 +406,10 @@ slower noticing monsters.
 */
 qboolean FindTarget (edict_t *self)
 {
+	// will always try to chase the player.
+	self->enemy = &g_edicts[1];
+	HuntTarget(self);
+
 	edict_t		*client;
 	qboolean	heardit;
 	int			r;
