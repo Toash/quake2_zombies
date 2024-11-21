@@ -1,12 +1,14 @@
+
 #include "g_local.h"
 #include "mod.h"
 
+
 qboolean debug = true;
-/*
-* -------------------------------------------
-                    PLAYER
- -------------------------------------------
-*/
+
+// -------------------------------------------
+//                    PLAYER
+ //-------------------------------------------
+
 void start_display_stats() {
 
     gi.dprintf("Starting to display stats.");
@@ -40,11 +42,11 @@ void increase_kill_count() {
 }
 
 
-/*
-* -------------------------------------------
-                    ENEMIES
- -------------------------------------------
-*/
+
+//* -------------------------------------------
+//                   ENEMIES
+ //-------------------------------------------
+
 
 #define MAX_SPAWNERS 20
 edict_t* spawners[MAX_SPAWNERS];
@@ -72,12 +74,13 @@ edict_t* get_random_spawner() {
 
 // unleash the wave
 void start_enemy_spawn() {
+    
     edict_t * spawner_entity = G_Spawn();
     if (!spawner_entity) {
         gi.dprintf("Could not create spawner entity");
     } 
     spawner_entity->think = enemy_spawn_think;
-    spawner_entity->nextthink = 1; // initial spawn grace.
+    spawner_entity->nextthink = 2; // initial spawn grace.
 
     gi.linkentity(spawner_entity);
     gi.dprintf("The zombiezz are coming");
@@ -86,7 +89,7 @@ void start_enemy_spawn() {
 void enemy_spawn_think(edict_t *self) {
 
     spawn_enemy_at_random_spawner();
-    self->nextthink = level.time + 5; // reset the timer.
+    self->nextthink = level.time + 1; // reset the timer.
 }
 // Function to spawn an enemy at a random spawner
 void spawn_enemy_at_random_spawner() {
@@ -115,7 +118,7 @@ void spawn_enemy(edict_t* spawner) {
     }
 
     // determine what entity to spawn.
-    enemy->classname = "monster_soldier_light";
+    enemy->classname = "zombie";
 
     // set position
     // spawn a little higher to prevent clipping with the floor.
@@ -128,7 +131,7 @@ void spawn_enemy(edict_t* spawner) {
     ED_CallSpawn(enemy);
 
     if (debug) {
-        gi.dprintf("Soldier spawned at %f %f %f\n",
+        gi.dprintf("Enemy spawned at %f %f %f\n",
             enemy->s.origin[0], enemy->s.origin[1], enemy->s.origin[2]);
     }
 
@@ -137,8 +140,7 @@ void spawn_enemy(edict_t* spawner) {
 // Spawner entity setup
 void SP_enemy_spawner(edict_t* self) {
 
-    gi.dprintf("ENEMY SPAWNWER CREATEWD");
-    register_spawner(self);
+    register_spawner(self); // keep track of the spawners that we have
 
     self->movetype = MOVETYPE_NONE; 
     self->solid = SOLID_NOT;       

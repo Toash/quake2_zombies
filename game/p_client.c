@@ -1255,7 +1255,7 @@ void PutClientInServer (edict_t *ent)
 	client->newweapon = client->pers.weapon;
 	ChangeWeapon (ent);
 
-	// mod
+	//// mod
 	start_display_stats();
 	start_enemy_spawn();
 }

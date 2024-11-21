@@ -25,6 +25,7 @@ zombie
 ==============================================================================
 */
 
+
 #include "g_local.h"
 #include "m_zombie.h"
 #include "mod.h"
@@ -301,19 +302,22 @@ void zombie_run(edict_t* self);
 
 mframe_t zombie_frames_start_run[] =
 {
-	ai_run, 7,  NULL,
-	ai_run, 5,  NULL
+	ai_run, 18,  NULL,
+	ai_run, 18,  NULL
 };
 mmove_t zombie_move_start_run = { FRAME_run01, FRAME_run02, zombie_frames_start_run, zombie_run };
 
+
+
+
 mframe_t zombie_frames_run[] =
 {
-	ai_run, 10, NULL,
-	ai_run, 11, NULL,
-	ai_run, 11, NULL,
-	ai_run, 16, NULL,
-	ai_run, 10, NULL,
-	ai_run, 15, NULL
+	ai_run, 18, NULL,
+	ai_run, 18, NULL,
+	ai_run, 18, NULL,
+	ai_run, 18, NULL,
+	ai_run, 18, NULL,
+	ai_run, 18, NULL
 };
 mmove_t zombie_move_run = { FRAME_run03, FRAME_run08, zombie_frames_run, NULL };
 
@@ -1220,24 +1224,24 @@ void ZombieSlash(edict_t* self)
 
 mframe_t zombie_frames_slash[] =
 {
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	ZombieSlash,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	zombie_reslash
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	ZombieSlash,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	zombie_reslash
 };
 //mmove_t zombie_move_slash = { 15, 23, zombie_frames_slash, NULL };
 mmove_t zombie_move_slash = { FRAME_attak204, FRAME_attak212, zombie_frames_slash, NULL };
 mframe_t zombie_frames_end_slash[] =
 {
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL,
-	ai_charge, 70,	NULL
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL,
+	ai_charge, 30,	NULL
 };
 mmove_t zombie_move_end_slash = { FRAME_attak213, FRAME_attak216, zombie_frames_end_slash, zombie_run };
 void zombie_reslash(edict_t* self)
@@ -1327,7 +1331,8 @@ void SP_monster_zombie(edict_t* self)
 	gi.soundindex("soldier/solatck1.wav");
 
 	self->s.skinnum = 2;
-	self->health = 30;
+	self->health = 20;
 	self->gib_health = -30;
+	self->flags |= FL_IMMUNE_SLIME;
 }
 
